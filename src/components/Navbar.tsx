@@ -1,5 +1,4 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import React from 'react';
 import { Disclosure } from '@headlessui/react';
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
 
@@ -42,9 +41,9 @@ const Navbar = () => {
               
               <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
                 <div className="flex flex-shrink-0 items-center">
-                  <Link to="/" className="text-2xl font-space font-bold text-secondary">
+                  <a href="#" className="text-2xl font-bold text-secondary">
                     CN
-                  </Link>
+                  </a>
                 </div>
                 <div className="hidden sm:ml-6 sm:flex sm:space-x-8">
                   {navigation.map((item) => (

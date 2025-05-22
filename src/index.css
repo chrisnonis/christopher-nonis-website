@@ -4,15 +4,22 @@
 @tailwind components;
 @tailwind utilities;
 
+@import './custom-utilities.css';
+
 @layer base {
+  html {
+    @apply font-space-grotesk;
+  }
+  
   body {
-    @apply font-sans bg-primary text-light antialiased;
+    @apply bg-primary text-light;
+    margin: 0;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
   }
-  h1, h2, h3, h4, h5, h6 {
-    @apply font-sans;
-  }
+
   code {
-    @apply font-mono;
+    @apply font-fira;
   }
 }
 
@@ -34,61 +41,14 @@
   }
 }
 
-:root {
-  --primary-color: #0a0a0a;
-  --secondary-color: #1a1a1a;
-  --accent-color: #3b82f6;
-  --text-light: #ffffff;
-  --text-dark: #1a1a1a;
-}
-
-body {
-  margin: 0;
-  font-family: 'Space Grotesk', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-code {
-  font-family: 'Fira Code', source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-}
-
-.bg-primary {
-  background-color: var(--primary-color);
-}
-
-.bg-secondary {
-  background-color: var(--secondary-color);
-}
-
-.text-light {
-  color: var(--text-light);
-}
-
-.text-dark {
-  color: var(--text-dark);
-}
-
-.accent {
-  color: var(--accent-color);
-}
-
-/* Custom Animations */
-@keyframes float {
-  0% {
-    transform: translateY(0px);
+@layer utilities {
+  .animate-float {
+    animation: float 6s ease-in-out infinite;
   }
-  50% {
-    transform: translateY(-20px);
-  }
-  100% {
-    transform: translateY(0px);
-  }
-}
 
-.animate-float {
-  animation: float 6s ease-in-out infinite;
+  @keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-20px); }
+    100% { transform: translateY(0px); }
+  }
 } 

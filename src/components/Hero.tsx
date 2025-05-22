@@ -3,13 +3,10 @@ import { motion } from 'framer-motion';
 
 const Hero = () => {
   return (
-    <section className="min-h-screen flex items-center justify-center relative overflow-hidden">
+    <section className="min-h-screen flex items-center justify-center relative overflow-hidden bg-primary">
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-20">
-        <div className="absolute inset-0" style={{
-          backgroundImage: `radial-gradient(circle at 25px 25px, ${getComputedStyle(document.documentElement).getPropertyValue('--secondary-color')} 2%, transparent 0%), radial-gradient(circle at 75px 75px, ${getComputedStyle(document.documentElement).getPropertyValue('--secondary-color')} 2%, transparent 0%)`,
-          backgroundSize: '100px 100px'
-        }} />
+        <div className="absolute inset-0 bg-gradient-to-br from-secondary/20 to-accent/20" />
       </div>
 
       <div className="container relative z-10">
@@ -19,21 +16,22 @@ const Hero = () => {
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
           >
-            <h1 className="text-4xl md:text-6xl font-bold mb-6">
+            <h1 className="text-4xl md:text-6xl font-bold mb-6 font-space-grotesk">
               Christopher Nonis
               <span className="block text-secondary mt-2">
                 AI Enthusiast & Tech Innovator
               </span>
             </h1>
-            <p className="text-xl text-light/80 mb-8">
+            <p className="text-xl text-light/80 mb-8 font-inter">
               Semi-retired professional exploring the frontiers of AI, web development, and startup innovation
             </p>
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.3, duration: 0.5 }}
+              className="space-x-4"
             >
-              <a href="#projects" className="btn btn-primary mr-4">
+              <a href="#projects" className="btn btn-primary">
                 Explore My Work
               </a>
               <a href="#contact" className="btn btn-outline">
