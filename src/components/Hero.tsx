@@ -3,13 +3,13 @@ import { motion } from 'framer-motion';
 
 const Hero = () => {
   return (
-    <section className="min-h-screen flex items-center justify-center relative overflow-hidden bg-primary">
+    <section className="min-h-screen flex items-center justify-center relative overflow-hidden bg-primary pt-20 md:pt-0">
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-20">
         <div className="absolute inset-0 bg-gradient-to-br from-secondary/20 to-accent/20" />
       </div>
 
-      <div className="container relative z-10">
+      <div className="container relative z-10 py-12 md:py-0">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <motion.div
             initial={{ opacity: 0, x: -50 }}
