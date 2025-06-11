@@ -8,7 +8,7 @@ const projects = [
       <>
         VoiceCanvas is an innovative application that transforms spoken descriptions into digital art using voice AI and conversational video agents.<br />
         <span className="block mt-2">This app was my entry for the Hackathon 2025 competition.</span>
-        <span className="block mt-2">🏆 <strong>Bolt Hackathon 2024 Entry</strong> - <a href="https://hackathon.dev/" target="_blank" rel="noopener noreferrer" className="underline text-blue-500">Visit Hackathon</a></span>
+        <span className="block mt-2">🏆 <strong>Bolt Hackathon 2025 Entry</strong> - <a href="https://hackathon.dev/" target="_blank" rel="noopener noreferrer" className="underline text-blue-500">Visit Hackathon</a></span>
         <a href="https://github.com/chrisnonis/BoltVoice2Canvas" target="_blank" rel="noopener noreferrer" className="underline text-blue-500 block mt-2">GitHub Repo</a>
         <a href="https://voice2canvas.co.uk/" target="_blank" rel="noopener noreferrer" className="underline text-blue-500 block">Live App</a>
       </>
@@ -26,6 +26,21 @@ const projects = [
     ],
     hackathonBadge: undefined,
     hackathonLink: undefined,
+  },
+  {
+    title: 'Eco Track: Requirements Analysis and Algorand Integration',
+    description: (
+      <>
+        <strong>Project Overview</strong><br />
+        Eco Track is a blockchain-based platform designed to track environmental metrics and sustainability efforts using Algorand blockchain technology. The platform will leverage Cursor for development and integrate with Algorand MCP (Model Context Protocol) to provide transparent, immutable records of environmental data and sustainability initiatives.
+      </>
+    ),
+    displayType: 'image',
+    technologies: ['React', 'TypeScript', 'Algorand', 'Blockchain', 'Cursor'],
+    status: 'Planning',
+    statusColor: 'bg-yellow-500',
+    icon: '/assets/eco-track-icon.png',
+    examples: [],
   },
   {
     title: 'TaskBuddy AI',
@@ -85,14 +100,16 @@ const Projects = () => {
                 className="bg-primary/30 rounded-xl overflow-hidden hover:transform hover:scale-105 transition-all duration-300"
               >
                 <div className="aspect-video relative overflow-hidden bg-secondary/20">
-                  {project.title === 'Voice2Canvas' ? (
+                  {project.displayType === 'image' && project.icon ? (
                     <div className="absolute inset-0 flex flex-col items-center justify-center p-4 gap-2">
-                      <img src={project.icon} alt="Voice2Canvas Icon" className="w-20 h-20 mb-2" />
-                      <div className="flex gap-2 mt-2">
-                        {project.examples && project.examples.map((img, i) => (
-                          <img key={i} src={img} alt={`Example ${i+1}`} className="w-16 h-16 rounded shadow" />
-                        ))}
-                      </div>
+                      <img src={project.icon} alt={project.title + ' Icon'} className="w-20 h-20 mb-2" />
+                      {project.examples && project.examples.length > 0 && (
+                        <div className="flex gap-2 mt-2">
+                          {project.examples.map((img, i) => (
+                            <img key={i} src={img} alt={`Example ${i+1}`} className="w-16 h-16 rounded shadow" />
+                          ))}
+                        </div>
+                      )}
                     </div>
                   ) : project.displayType === 'text' ? (
                     <div className="absolute inset-0 flex items-center justify-center">
