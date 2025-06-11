@@ -52,8 +52,8 @@ const Hero = () => {
             <div className="w-full aspect-square relative">
               <div className="absolute inset-0 bg-gradient-to-br from-secondary to-accent rounded-full opacity-20 blur-3xl animate-pulse" />
               <div className="relative z-10 w-full h-full rounded-full border-2 border-secondary/30 overflow-hidden animate-float">
-                {/* Add your profile image here */}
-                <div className="w-full h-full bg-gradient-to-br from-secondary to-accent opacity-90" />
+                {/* Profile image inside bouncing blue circle */}
+                <img src="/assets/chrisnonis.jpeg" alt="Chris Nonis" className="w-full h-full object-cover rounded-full" />
               </div>
             </div>
           </motion.div>
