@@ -39,7 +39,7 @@ const projects = [
     technologies: ['React', 'TypeScript', 'Algorand', 'Blockchain', 'Cursor'],
     status: 'Planning',
     statusColor: 'bg-yellow-500',
-    icon: '/assets/eco-track-icon.png',
+    icon: '/assets/eco-track-icon.jpeg',
     examples: [],
   },
   {
