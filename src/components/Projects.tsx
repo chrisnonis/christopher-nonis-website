@@ -18,11 +18,11 @@ const projects = [
     link: 'https://voice2canvas.co.uk/',
     status: 'Completed',
     statusColor: 'bg-blue-600',
-    icon: '/src/assets/voice2canvas.png',
+    icon: '/assets/voice2canvas.png',
     examples: [
-      '/src/assets/example-monalisa.png',
-      '/src/assets/example-cat.png',
-      '/src/assets/example-spongebob.png'
+      '/assets/example-monalisa.png',
+      '/assets/example-cat.png',
+      '/assets/example-spongebob.png'
     ],
     hackathonBadge: undefined,
     hackathonLink: undefined,
