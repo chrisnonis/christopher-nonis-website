@@ -37,9 +37,6 @@ const Hero = () => {
               <a href="#contact" className="btn btn-outline">
                 Get in Touch
               </a>
-              <a href="https://github.com/chrisnonis" target="_blank" rel="noopener noreferrer" className="btn btn-primary">
-                Explore My GitHub
-              </a>
             </motion.div>
           </motion.div>
 
